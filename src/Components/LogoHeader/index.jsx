@@ -8,7 +8,7 @@ function LogoHeader() {
         <div className="logo">
             <div className="center-logo">
             <h1>PictureScope</h1>
-            <p>For emotional memory</p>
+            <p>Emotional memories</p>
             </div>
         </div>
     )
