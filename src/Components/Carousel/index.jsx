@@ -1,4 +1,3 @@
-import React from "react";
 import { Carousel } from 'react-carousel-minimal';
 
 function App() {
@@ -28,7 +27,7 @@ function App() {
       caption: "Darjeeling"
     },
     {
-      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
+      image: "https://astrocamp.org/app/uploads/2015/12/IS-BH-1024x576-1.jpg",
       caption: "San Francisco"
     },
     {
@@ -71,8 +70,6 @@ function App() {
             pauseIconSize="40px"
             slideBackgroundColor="darkgrey"
             slideImageFit="cover"
-            thumbnails={true}
-            thumbnailWidth="100px"
             style={{
               textAlign: "center",
               maxWidth: "850px",
