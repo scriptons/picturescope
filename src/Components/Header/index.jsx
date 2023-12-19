@@ -1,6 +1,7 @@
 import React from "react";
 import LogoHeader from '../LogoHeader';
-import "../../Header.css"
+import Navbar from '../Navbar';
+import "../../Styles/Header.css"
 
 function Header() {
 
@@ -8,6 +9,7 @@ function Header() {
         <>
         <div className="Header">
             <LogoHeader/>
+            <Navbar />
         </div>
         </>
     )

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../LogoHeader.css"
+import "../../Styles/LogoHeader.css"
 
 
 function LogoHeader() {
@@ -8,7 +8,6 @@ function LogoHeader() {
         <div className="logo">
             <div className="center-logo">
             <h1>PictureScope</h1>
-            <p>Emotional memories</p>
             </div>
         </div>
     )

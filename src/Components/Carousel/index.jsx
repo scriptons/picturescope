@@ -1,5 +1,5 @@
 import ImageSlider from "../ImageSlider";
-import '../../ImageSlider.css';
+import '../../Styles/ImageSlider.css';
 
 const App = () => {
   const slides = [

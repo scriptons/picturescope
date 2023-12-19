@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter} from 'react-router-dom';
-import './index.css';
+import './Styles/index.css';
 import Main from './Pages/Main';
 //import CardPage from './Pages/CardPage';
 

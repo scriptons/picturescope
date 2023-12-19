@@ -2,7 +2,7 @@ import React from "react";
 import Header from '../../Components/Header';
 import App from '../../Components/Carousel';
 import Footer from '../../Components/Footer';
-import '../../Main.css';
+import '../../Styles/Main.css';
 
 
 function Main() {
