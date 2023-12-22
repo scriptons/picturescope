@@ -11,12 +11,12 @@ function Navbar() {
             
             <div className="nav-links">
                 <NavLink exact to
-                    ="/" activeClassName="active"
+                    ="/GalleryPage" activeClassName="active"
                 >
                     Gallery
                 </NavLink>
                 <NavLink
-                    to="/Square" activeClassName="active"
+                    to="/Memories" activeClassName="active"
                 >
                     Memories
                 </NavLink>
