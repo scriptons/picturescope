@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './Styles/index.css';
 import Main from './Pages/Main';
 import GalleryPage from './Pages/GalleryPage';
+import MemoriesPage from './Pages/MemoriesPage';
 //import CardPage from './Pages/CardPage';
 
 
@@ -14,6 +15,7 @@ root.render(
     <Routes>
     <Route path="/" element={<Main />} />
     <Route path="/gallerypage" element={GalleryPage} />
+    <Route path="/memoriespage" element={MemoriesPage} />
     </Routes>
     </BrowserRouter>
     </React.StrictMode>
