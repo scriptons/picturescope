@@ -1,0 +1,28 @@
+.p404 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+    height: 50vh;
+}
+
+
+.page404 h1 {
+    font-weight: 500;
+    font-size: 150px;
+}
+
+.page404 p {
+    font-size: x-large;
+}
+
+.lin {
+    display: flex;
+    color: black;
+    margin-top: 50px;
+    font-size: large;
+    margin-bottom: 35px;
+}
+
