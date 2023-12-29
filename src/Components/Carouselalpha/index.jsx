@@ -1,86 +1,70 @@
-import { Carousel } from 'react-carousel-minimal';
+import React, { useState } from 'react';
+import { useParams } from "react-router-dom";
+import JSONpicture from "../../JSON/Logement.json";
+import arrowleft from "../../assets/arrowleft.png";
+import arrowright from "../../assets/arrowright.png";
+import "../../Styles/pictureslide.css";
 
-function App() {
- const data = [
-    {
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
-      caption: "San Francisco"
-    },
-    {
-      image: "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
-      caption: "Scotland"
-    },
-    {
-      image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
-      caption: "Darjeeling"
-    },
-    {
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
-      caption: "San Francisco"
-    },
-    {
-      image: "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
-      caption: "Scotland"
-    },
-    {
-      image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
-      caption: "Darjeeling"
-    },
-    {
-      image: "https://astrocamp.org/app/uploads/2015/12/IS-BH-1024x576-1.jpg",
-      caption: "San Francisco"
-    },
-    {
-      image: "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
-      caption: "Scotland"
-    },
-    {
-      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Darjeeling"
-    }
-  ];
 
-  const captionStyle = {
-    fontSize: '2em',
-    fontWeight: 'bold',
-  }
-  const slideNumberStyle = {
-    fontSize: '20px',
-    fontWeight: 'bold',
-  }
-  return (
-    <div className="App">
-      <div style={{ textAlign: "center" }}>
-        <div style={{
-          padding: "0 20px"
-        }}>
-          <Carousel
-            data={data}
-            time={2000}
-            width="850px"
-            height="500px"
-            captionStyle={captionStyle}
-            radius="10px"
-            slideNumber={true}
-            slideNumberStyle={slideNumberStyle}
-            captionPosition="bottom"
-            automatic={true}
-            dots={true}
-            pauseIconColor="white"
-            pauseIconSize="40px"
-            slideBackgroundColor="darkgrey"
-            slideImageFit="cover"
-            style={{
-              textAlign: "center",
-              maxWidth: "850px",
-              maxHeight: "500px",
-              margin: "40px auto",
-            }}
-          />
+function Pictureslide() {
+
+    const idLogement = useParams();
+    console.log(idLogement.id);
+    const monLogement = JSONpicture.find((element)=> element.id === idLogement.id);
+    //console.log(monLogement);
+    const myPicture = monLogement.pictures;
+    //console.log(myPicture.length); 
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const currentImage = myPicture[currentIndex];
+    //console.log(myPicture[currentIndex].length);
+    //console.log(currentImage); 
+     
+    if (myPicture.length === 1) {
+      return (
+        <div className="picture-slide">
+          <img className="picture" src={currentImage} alt={currentImage} /> 
         </div>
-      </div>
-    </div>
-  );
-}
+  ) 
 
-export default App;
+      } else {
+
+    const prevImage = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(myPicture.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+  
+  const nextImage = () => {
+    if (currentIndex === myPicture.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+     }
+     
+  };
+    return (
+      <div className="picture-slide">
+        
+            <div className="arrows-left" onClick={prevImage}>
+                <img className="left"
+                src = {arrowleft}
+                alt = "flèche gauche" 
+                 />              
+            </div><img className="picture" src={currentImage} alt={currentImage} /> 
+            <div className="position">
+        <p>{currentIndex + 1}/{myPicture.length}</p>
+      </div>
+            <div className="arrows-right" onClick={nextImage}>
+                <img className="right"
+                src = {arrowright}
+                alt = "flèche droite" 
+                 />
+            </div>
+            
+            </div>
+    );
+  }
+}
+  export default Pictureslide;
