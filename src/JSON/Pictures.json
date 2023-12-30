@@ -1,8 +1,8 @@
 [
-    { "url": "http://localhost:3000/image-1.jpg", "title": "beach" },
-    { "url": "http://localhost:3000/image-2.jpg", "title": "boat" },
-    { "url": "http://localhost:3000/image-3.jpg", "title": "forest" },
-    { "url": "http://localhost:3000/image-4.jpg", "title": "city" },
-    { "url": "http://localhost:3000/image-5.jpg", "title": "italy" },
-    { "url": "http://localhost:3000/peinture-lac-montagne-montagne-arriere-plan.jpg", "title": "lac" }
+    { "id": "c67ab8a7", "url": "http://localhost:3000/image-1.jpg", "title": "beach" },
+    { "id": "c1515181", "url": "http://localhost:3000/image-2.jpg", "title": "boat" },
+    { "id": "j15151j5", "url": "http://localhost:3000/image-3.jpg", "title": "forest" },
+    { "id": "b154t566", "url": "http://localhost:3000/image-4.jpg", "title": "city" },
+    { "id": "er1515z1", "url": "http://localhost:3000/image-5.jpg", "title": "italy" },
+    { "id": "z1515r15", "url": "http://localhost:3000/peinture-lac-montagne-montagne-arriere-plan.jpg", "title": "lac" }
   ]

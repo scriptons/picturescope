@@ -7,8 +7,8 @@ function Cards () {
     return (
         <div className="cards">
             {JSON.map ((element) => (
-                <Link to = { `pictures/${element.url}`} //utilisation de <Link> pour le clic sur images 
-                    key = {element.url} 
+                <Link to = { `gallerypage/${element.id}`} //utilisation de <Link> pour le clic sur images 
+                    key = {element.id} 
                     className="card"
                 >
                     <img src = { element.url } alt = { element.title } />
