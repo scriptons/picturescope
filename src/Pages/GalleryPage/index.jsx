@@ -7,7 +7,6 @@ function GalleryPage() {
 
     return (
         <div className="App">
-            <h1>GalleryPage</h1>
             <Cards/>
         </div>
     )

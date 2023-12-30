@@ -16,9 +16,9 @@ function Navbar() {
                     Gallery
                 </NavLink>
                 <NavLink
-                    to="/MemoriesPage" activeClassName="active"
+                    to="/LoginPage" activeClassName="active"
                 >
-                    Memories
+                    Login
                 </NavLink>
             </div>
         </div>

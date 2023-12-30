@@ -2,13 +2,13 @@ import React from "react";
 //import "../../Styles/GalleryPage.css"
 
 
-function MemoriesPage() {
+function LoginPage() {
 
     return (
         <div className="App">
-            <h1>Memories</h1>
+            <h1>Login</h1>
         </div>
     )
 }
 
-export default MemoriesPage() 
+export default LoginPage() 
