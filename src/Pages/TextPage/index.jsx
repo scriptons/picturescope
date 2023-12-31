@@ -6,14 +6,11 @@ import Cards from "../../Components/Cards";
 
 
 function TextPage() {
-    /*const idLogement = useParams();
-    console.log(idLogement.id);
-   const monLogement = JSON.find((element)=> element.id === idLogement.id);
-    console.log(monLogement);*/
+    
     return (
         <div className="App">
             <h1>Text from pictures</h1>
-            <Cards />
+           
         </div>
     )
 }

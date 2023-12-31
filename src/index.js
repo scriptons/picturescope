@@ -20,8 +20,8 @@ root.render(
     <Routes>
     <Route path="/" element={<Main />} />
     <Route path="/gallerypage" element={GalleryPage} />
-    <Route path="loginpage" element={LoginPage} />
-    <Route path="textpage" element={TextPage} />
+    <Route path="/loginpage" element={LoginPage} />
+    <Route path="/textpage" element={TextPage} />
     <Route path = "*" element ={<ErrorPage/>} /> 
     </Routes>
     <Footer/>

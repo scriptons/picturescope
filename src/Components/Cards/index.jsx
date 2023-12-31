@@ -7,7 +7,7 @@ function Cards () {
     return (
         <div className="cards">
             {JSON.map ((element) => (
-                <Link to = { `gallerypage/${element.id}`} //utilisation de <Link> pour le clic sur images 
+                <Link to = {`/textpage${element.id}`} 
                     key = {element.id} 
                     className="card"
                 >
@@ -18,5 +18,6 @@ function Cards () {
         </div> 
     )
 }
+
 
 export default Cards;

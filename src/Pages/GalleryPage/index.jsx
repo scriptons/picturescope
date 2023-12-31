@@ -8,11 +8,8 @@ function GalleryPage() {
 
     return (
         <div className="App">
-            <NavLink exact to
-                    ="/TextPage" activeClassName="active"
-                >
-                    <Cards/>
-                </NavLink>
+
+            <Cards/>
             
         </div>
     )
