@@ -7,7 +7,7 @@ function Cards () {
     return (
         <div className="cards">
             {JSON.map ((element) => (
-                <Link to = {`/textpage${element.id}`} 
+                <Link to = {`/textpage/${element.id}`} 
                     key = {element.id} 
                     className="card"
                 >
@@ -19,5 +19,4 @@ function Cards () {
     )
 }
 
-
-export default Cards;
+export default Cards
